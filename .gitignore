@@ -1,0 +1,42 @@
+# Built application files
+*.apk
+*.aab
+*.apks
+
+# Files for the Kotlin project
+.gradle/
+build/
+**/build/
+.kotlin/
+*.class
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+!.idea/codeStyles/
+!.idea/vcs.xml
+*.iml
+*.ipr
+*.iws
+.captures
+.artifacts/
+
+# Keystore files
+*.jks
+*.keystore
+*.p12
+*.pepk
+
+# Environment variables & secrets
+*.env
+
+# C/C++ native build outputs
+.externalNativeBuild
+.cxx
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
