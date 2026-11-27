@@ -25,4 +25,18 @@ dependencyResolutionManagement {
 
 rootProject.name = "BTShutter"
 include(":app")
- 
+
+include(":core:common")
+include(":core:bluetooth")
+include(":core:designsystem")
+
+include(":domain:model")
+include(":domain:repository")
+include(":domain:usecase")
+
+include(":data:local")
+include(":data:repository")
+
+include(":feature:device-list")
+include(":feature:connection")
+include(":feature:camera-remote")

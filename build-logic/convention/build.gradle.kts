@@ -2,7 +2,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.apbley.btshutter.buildlogic" // 본인 패키지명.buildlogic으로 수정
+group = "com.apbley.btshutter.buildlogic"
 
 dependencies {
     compileOnly(libs.android.gradlePlugin)
@@ -14,12 +14,11 @@ gradlePlugin {
     plugins {
         register("androidLibrary") {
             id = "btshutter.android.library"
-            implementationClass = "AndroidLibraryConventionPlugin"
+            implementationClass = "com.apbley.btshutter.buildlogic.AndroidLibraryConventionPlugin"
         }
         register("androidLibraryCompose") {
             id = "btshutter.android.library.compose"
-            implementationClass = "AndroidLibraryComposeConventionPlugin"
+            implementationClass = "com.apbley.btshutter.buildlogic.AndroidLibraryComposeConventionPlugin"
         }
     }
 }
-

@@ -12,6 +12,8 @@ composeBom = "2026.02.01"
 compileSdk = "37"
 minSdk = "32"
 targetSdk = "37"
+appcompat = "1.8.0"
+material = "1.10.0"
 
 
 [libraries]
@@ -26,28 +28,22 @@ androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
 androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
 androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-androidx-compose-ui-test-manifest = { group = "androi2dx.compose.ui", name = "ui-test-manifest" }
+androidx-compose-ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
 androidx-compose-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "agp" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 compose-gradlePlugin = { group = "org.jetbrains.kotlin", name = "compose-compiler-gradle-plugin", version.ref = "kotlin" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 
 
 [plugins]
-# 안드로이드 기능을 포함한 라이브러리 모듈을 만들 때 사용
-# :core:bluetooth, :core:designsystem, :data:local, :feature:device-list
 android-application = { id = "com.android.application", version.ref = "agp" }
-
-# 안드로이드 SDK가 전혀 없는 순수 Kotlin(JVM) 모듈을 만들 때 사용
-# :domain:model, :domain:repository, :domain:usecase, :core:common
+android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
-# 내 커스텀 플러그인
 btshutter-android-library = { id = "btshutter.android.library", version = "unspecified" }
 btshutter-android-library-compose = { id = "btshutter.android.library.compose", version = "unspecified" }
-
-
-
-

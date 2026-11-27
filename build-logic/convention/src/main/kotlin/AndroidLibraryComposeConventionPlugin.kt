@@ -1,7 +1,6 @@
 package com.apbley.btshutter.buildlogic
 
-import com.android.build.gradle.LibraryExtension
-import com.apbley.btshutter.buildlogic.configureAndroidCompose
+import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.getByType
