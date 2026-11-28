@@ -13,12 +13,16 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidLibrary") {
-            id = "btshutter.android.library"
+            id = libs.plugins.btshutter.android.library.asProvider().get().pluginId // id = "btshutter.android.library"
             implementationClass = "com.apbley.btshutter.buildlogic.AndroidLibraryConventionPlugin"
         }
         register("androidLibraryCompose") {
-            id = "btshutter.android.library.compose"
+            id = libs.plugins.btshutter.android.library.compose.get().pluginId // id = "btshutter.android.library.compose"
             implementationClass = "com.apbley.btshutter.buildlogic.AndroidLibraryComposeConventionPlugin"
+        }
+        register("jvmLibrary") {
+            id = "btshutter.jvm.library"
+            implementationClass = "com.apbley.btshutter.buildlogic.JvmLibraryConventionPlugin"
         }
     }
 }
